@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Widget</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .weather-card {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            background: linear-gradient(to bottom right, #fce4ec, #e3f2fd);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card-header {
+            padding: 16px;
+            color: #333;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: 300;
+            margin: 0;
+        }
+
+        .card-description {
+            font-size: 14px;
+            color: #666;
+            font-weight: 300;
+        }
+
+        .card-content {
+            padding: 16px;
+        }
+
+        .current-weather {
+            background: linear-gradient(to right, #e1bee7, #fff1f9);
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .current-weather h3 {
+            font-size: 18px;
+            font-weight: 300;
+            margin: 0 0 8px;
+            color: #333;
+        }
+
+        .weather-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .temperature {
+            font-size: 36px;
+            font-weight: 300;
+            color: #333;
+        }
+
+        .condition {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .weather-details {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        .forecast {
+            margin-top: 16px;
+        }
+
+        .forecast h3 {
+            font-size: 18px;
+            font-weight: 300;
+            margin: 0 0 8px;
+            color: #333;
+        }
+
+        .forecast-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+        }
+
+        .forecast-day {
+            background-color: rgba(227, 242, 253, 0.5);
+            padding: 8px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .forecast-day p {
+            margin: 4px 0;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-card">
+        <div class="card-header">
+            <h2 class="card-title">Weather Forecast</h2>
+            <p class="card-description">5-day weather outlook</p>
+        </div>
+        <div class="card-content">
+            <div class="current-weather">
+                <h3>Current Weather</h3>
+                <div class="weather-main">
+                    <div>
+                        <p class="temperature">72°F</p>
+                        <p class="condition">Partly Cloudy</p>
+                    </div>
+                    <div class="weather-icon">☁️</div>
+                </div>
+                <div class="weather-details">
+                    <p>Humidity: 60%</p>
+                    <p>Wind: 5 mph</p>
+                </div>
+            </div>
+            <div class="forecast">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-grid">
+                    <div class="forecast-day">
+                        <p>Mon</p>
+                        <p>☀️</p>
+                        <p>75°F</p>
+                    </div>
+                    <div class="forecast-day">
+                        <p>Tue</p>
+                        <p>⛅</p>
+                        <p>73°F</p>
+                    </div>
+                    <div class="forecast-day">
+                        <p>Wed</p>
+                        <p>🌧️</p>
+                        <p>68°F</p>
+                    </div>
+                    <div class="forecast-day">
+                        <p>Thu</p>
+                        <p>☁️</p>
+                        <p>70°F</p>
+                    </div>
+                    <div class="forecast-day">
+                        <p>Fri</p>
+                        <p>💨</p>
+                        <p>72°F</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
